@@ -50,3 +50,10 @@ $ git remote add pb https://github.com/npvip/gitskills.git
 ### 远程仓库的移除与重命名
 `git remote rename [old shortname] [new shortname]`:重命名  
 `git remote rm [old shortname]`:移除  
+
+## 分支
+### 分支创建
+`git branch testing`:创建分支testing  
+`git log --oneline --decorate`:查看分支当前所指对象  
+### 分支切换
+`git checkout testing`:切换到testing分支  
