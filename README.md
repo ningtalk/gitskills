@@ -57,3 +57,5 @@ $ git remote add pb https://github.com/npvip/gitskills.git
 `git log --oneline --decorate`:查看分支当前所指对象  
 ### 分支切换
 `git checkout testing`:切换到testing分支  
+`git checkout -b [分支名]`:创建并切换到分支  
+
