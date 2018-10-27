@@ -1,4 +1,4 @@
-# Git skills
+# Git操作记录
 git基本操作.  
 
 ## 基本操作
