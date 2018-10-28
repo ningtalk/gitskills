@@ -59,9 +59,6 @@ $ git remote add pb https://github.com/npvip/gitskills.git
 `git checkout testing`:切换到testing分支  
 `git checkout -b [分支名]`:创建并切换到分支  
 
-
-testtest-testestaaa
-
-testtest-fadsf
-dasf
+### 删除分支
+`git branch -d [branchname]`
 
