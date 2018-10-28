@@ -72,5 +72,14 @@ $ git remote add pb https://github.com/npvip/gitskills.git
 
 ## 标签
 项目达到一个重要的阶段，并且希望永远记住那个特别的提交快照，可以使用`git tag`給它打上标签。  
-`git tag -a v1.0`
+`git tag -a v1.0`  
+
+### 查看标签
+`git tag`: 可以查看所有标签  
+
+### 删除标签
+`git tag -d [tagname]`  
+
+### 查看此版本所修改的内容
+`git show [tagname]`
 
