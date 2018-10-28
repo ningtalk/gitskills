@@ -16,8 +16,6 @@ git基本操作.
 ```git
 git diff readme.txt
 ```
-* `git log`:查看由近到远的提交日志。
-* `git log --pretty=oneline`:简洁版查看提交日志  
 
 ### 版本回退
 * `git reset --hard [版本id]`
@@ -28,6 +26,13 @@ git diff readme.txt
  1. readme.txt自修改后还没有被放到暂存区，现在，撤销修改就回到和版本库一模一样的状态；  
  2. readme.txt已经添加到暂存区后，又作了修改，现在，撤销修改就回到添加到暂存区后的状态。  
  也就是让这个文件回到最近一次git commit或git add时的状态。  
+ 
+## 查看提交历史
+`git log`: 查看由近及远的提交日志，查看时要退出按`Q`   
+`git log --oneline`: 查看历史提交记录简洁版本  
+`git log --oneline --graph`: 可以查看历史中什么时候出现分支、合并  
+`git log --reverse --oneline`: 查看由远及近的提交日志（逆向）  
+`git log --auhtor=[username] --oneline -5`: 查看某用户的提交日志  
  
 ## 远程仓库 
 远程仓库是指托管在因特网或其他网络中的你的项目的版本库。  
