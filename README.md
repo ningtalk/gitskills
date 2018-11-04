@@ -103,6 +103,11 @@ git rebase [startpoint] [endpoint] --onto [branchName]
 应切换到上述分支后使用`git reset --hard [logVersion]`，其中[logVersion]指的是复制区间的右边界。  
 
 ### 合并多个commit为一个完整commit
+当在本地仓库提交多次之后，需要把本地提交push到公共仓库中之前，为了让提交记录更简洁，希望把如下分支B、C、D三个提交记录合并
+为一个完整的提交，然后再push到公共仓库。  
+![git rebase03](https://github.com/npvip/gitskills/blob/master/img/git04.png)  
+
+使用的命令：`git rebase -i [startpoint] [endpoint]`，其中 -i的意思是弹出交互式界面让用户编辑完成合并操作。  
 
 
 
