@@ -84,9 +84,28 @@ $ git remote add pb https://github.com/npvip/gitskills.git
 `git show [tagname]`
 
 ## rebase
-git rebase过程相比git merge合并整合得到的结果没有任何区别，但是通过git rebase能产生一个更为整洁的提交历史。  
-合理使用rebase命令可以使我们的提交历史干净简洁。  
+git rebase过程相比git merge合并整合得到的结果没有任何区别，但是通过git rebase能产生一个更为整洁的提交历史，合理使用rebase命令可以使我们的提交历史干净简洁。  
+常用的场景举例： 
+### 将某分支的一段commit粘贴到另一分支上
+当我们项目中存在多个分支时，需要将某一个分支中的一段提交同时应用到另一个分支中，如下图:  
+![git rebase01](https://github.com/npvip/gitskills/blob/master/img/git02.png)   
+实际模拟例子见参考（git rebase用法小结）。  
+主要命令如下：  
+* rebase复制
+```git
+git rebase [startpoint] [endpoint] --onto [branchName]
+```
+其中，`[startpoint]`,`[endpoint]`指的是编辑区间，且是**前开后闭**的，`--onto`是指将指定的
+区间复制到分支`[branchName]`上。  
+* 处理`HEAD`
+执行完复制操作后，才是HEAD还是处于游离状态，如下图所示：  
+![git rebase02](https://github.com/npvip/gitskills/blob/master/img/git03.png)  
+应切换到上述分支后使用`git reset --hard [logVersion]`，其中[logVersion]指的是复制区间的右边界。  
+
+### 合并多个commit为一个完整commit
+
 
 
 ## 参考
 * Git Community Book中文版:http://gitbook.liuhui998.com/4_2.html  
+* git rebase用法小结:https://www.jianshu.com/p/4a8f4af4e803  
