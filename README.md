@@ -83,3 +83,10 @@ $ git remote add pb https://github.com/npvip/gitskills.git
 ### 查看此版本所修改的内容
 `git show [tagname]`
 
+## rebase
+git rebase过程相比git merge合并整合得到的结果没有任何区别，但是通过git rebase能产生一个更为整洁的提交历史。  
+合理使用rebase命令可以使我们的提交历史干净简洁。  
+
+
+## 参考
+* Git Community Book中文版:http://gitbook.liuhui998.com/4_2.html  
