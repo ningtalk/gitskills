@@ -46,6 +46,10 @@ git diff readme.txt
 $ git remote add pb https://github.com/npvip/gitskills.git
 ```
 如果想拉去pb仓库中有而你本地仓库没有的信息，可以运行`git fetch pb`  
+
+### 从远程拉取分支到本地
+`git checkout -b <local-branchname> origin/dev(远程分支)`:在本地创建分支并拉取远程仓库分支，并切换到该分支
+
 ### 从远程仓库拉取
 `git fetch [remote-name]`:  
 该命令会访问远程仓库，从中拉取所有你还没有的数据。  
