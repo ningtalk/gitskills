@@ -19,3 +19,4 @@
 步骤：
 1. 克隆远程仓库: git clone https://github.com/npvip/gitskills.git
 2. 创建并切换到分支mydev: git checkout -b mydev origin/dev
+3. 推送到远程分支: git push origin HEAD:dev
