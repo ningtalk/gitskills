@@ -113,6 +113,9 @@ git rebase [startpoint] [endpoint] --onto [branchName]
 
 使用的命令：`git rebase -i [startpoint] [endpoint]`，其中 -i的意思是弹出交互式界面让用户编辑完成合并操作。  
 
+## alias
+git config --global alias.l 'log --all --graph --decorate'  
+这样设置后可以用命令`git l` (效果同`git log --all --graph --decorate`)
 
 
 ## 参考
