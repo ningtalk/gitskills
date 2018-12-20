@@ -75,7 +75,7 @@ $ git remote add pb https://github.com/npvip/gitskills.git
 `git merge`: 合并分支到当前分支  
 
 ### 查看当前的本地分支与远程分支的关联关系
-`git branch -vv'  
+`git branch -vv`  
 
 ### 把本地分支与远程origin的分支进行关联处理
 `git branch --set-upstream-to=<remote branch name>`
