@@ -74,6 +74,13 @@ $ git remote add pb https://github.com/npvip/gitskills.git
 ### 合并分支
 `git merge`: 合并分支到当前分支  
 
+### 查看当前的本地分支与远程分支的关联关系
+`git branch -vv'  
+
+### 把本地分支与远程origin的分支进行关联处理
+`git branch --set-upstream-to=<remote branch name>`
+
+
 ## 标签
 项目达到一个重要的阶段，并且希望永远记住那个特别的提交快照，可以使用`git tag`給它打上标签。  
 `git tag -a v1.0`  
