@@ -46,6 +46,10 @@ git diff readme.txt
 $ git remote add pb https://github.com/npvip/gitskills.git
 ```
 如果想拉去pb仓库中有而你本地仓库没有的信息，可以运行`git fetch pb`  
+
+### 从远程拉取分支到本地
+`git checkout -b <local-branchname> origin/dev(远程分支)`:在本地创建分支并拉取远程仓库分支，并切换到该分支
+
 ### 从远程仓库拉取
 `git fetch [remote-name]`:  
 该命令会访问远程仓库，从中拉取所有你还没有的数据。  
@@ -70,6 +74,13 @@ $ git remote add pb https://github.com/npvip/gitskills.git
 ### 合并分支
 `git merge`: 合并分支到当前分支  
 
+### 查看当前的本地分支与远程分支的关联关系
+`git branch -vv`  
+
+### 把本地分支与远程origin的分支进行关联处理
+`git branch --set-upstream-to=<remote branch name>`
+
+
 ## 标签
 项目达到一个重要的阶段，并且希望永远记住那个特别的提交快照，可以使用`git tag`給它打上标签。  
 `git tag -a v1.0`  
@@ -83,3 +94,37 @@ $ git remote add pb https://github.com/npvip/gitskills.git
 ### 查看此版本所修改的内容
 `git show [tagname]`
 
+## rebase
+git rebase过程相比git merge合并整合得到的结果没有任何区别，但是通过git rebase能产生一个更为整洁的提交历史，合理使用rebase命令可以使我们的提交历史干净简洁。  
+常用的场景举例： 
+### 将某分支的一段commit粘贴到另一分支上
+当我们项目中存在多个分支时，需要将某一个分支中的一段提交同时应用到另一个分支中，如下图:  
+![git rebase01](https://github.com/npvip/gitskills/blob/master/img/git02.png)   
+实际模拟例子见参考（git rebase用法小结）。  
+主要命令如下：  
+* rebase复制
+```git
+git rebase [startpoint] [endpoint] --onto [branchName]
+```
+其中，`[startpoint]`,`[endpoint]`指的是编辑区间，且是**前开后闭**的，`--onto`是指将指定的
+区间复制到分支`[branchName]`上。  
+* 处理`HEAD`
+执行完复制操作后，才是HEAD还是处于游离状态，如下图所示：  
+![git rebase02](https://github.com/npvip/gitskills/blob/master/img/git03.png)  
+应切换到上述分支后使用`git reset --hard [logVersion]`，其中[logVersion]指的是复制区间的右边界。  
+
+### 合并多个commit为一个完整commit
+当在本地仓库提交多次之后，需要把本地提交push到公共仓库中之前，为了让提交记录更简洁，希望把如下分支B、C、D三个提交记录合并
+为一个完整的提交，然后再push到公共仓库。  
+![git rebase03](https://github.com/npvip/gitskills/blob/master/img/git04.png)  
+
+使用的命令：`git rebase -i [startpoint] [endpoint]`，其中 -i的意思是弹出交互式界面让用户编辑完成合并操作。  
+
+## alias
+git config --global alias.l 'log --all --graph --decorate'  
+这样设置后可以用命令`git l` (效果同`git log --all --graph --decorate`)
+
+
+## 参考
+* Git Community Book中文版:http://gitbook.liuhui998.com/4_2.html  
+* git rebase用法小结:https://www.jianshu.com/p/4a8f4af4e803  
