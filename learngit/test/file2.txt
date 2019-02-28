@@ -1,3 +1,4 @@
 add something
 ****rebase test****
 [origin/master]add commit c
+[origin/master]add commit d
