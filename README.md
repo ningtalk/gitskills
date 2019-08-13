@@ -78,7 +78,8 @@ $ git remote add pb https://github.com/npvip/gitskills.git
 `git branch -vv`  
 
 ### 把本地分支与远程origin的分支进行关联处理
-`git branch --set-upstream-to=<remote branch name>`
+`git branch --set-upstream-to=<remote branch name>`  
+切换到本地分支后`git branch -u <remote branch name>`
 
 
 ## 标签
@@ -124,6 +125,8 @@ git rebase [startpoint] [endpoint] --onto [branchName]
 git config --global alias.l 'log --all --graph --decorate'  
 这样设置后可以用命令`git l` (效果同`git log --all --graph --decorate`)
 
+## 添加commit_template
+增加提交模板，待补充
 
 ## 参考
 * Git Community Book中文版:http://gitbook.liuhui998.com/4_2.html  
