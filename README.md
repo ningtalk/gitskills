@@ -71,6 +71,10 @@ $ git remote add pb https://github.com/npvip/gitskills.git
 ### 删除分支
 `git branch -d [branchname]`  
 
+### 删除远程分支
+git branch -r -d origin/branch-name
+git push origin :branch-name
+
 ### 合并分支
 `git merge`: 合并分支到当前分支  
 
